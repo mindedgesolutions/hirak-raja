@@ -17,7 +17,7 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-1.5 text-card">
             <webIcons.email size={14} />
-            <span className="text-xs tracking-wider">test@test.com</span>
+            <span className="text-xs tracking-widest">test@test.com</span>
           </div>
         </div>
         <div className=""></div>
