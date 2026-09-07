@@ -10,3 +10,7 @@ export const webIcons = {
   instagram: FaInstagram,
   youtube: FaYoutube,
 };
+
+export const titles = {
+  appName: process.env.NEXT_APP_TITLE,
+};

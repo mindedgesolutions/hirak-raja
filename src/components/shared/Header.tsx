@@ -1,6 +1,6 @@
+import { PageWrapper } from '@/components';
 import { webIcons } from '@/constants';
 import { ModeToggle } from '../theme-toggle';
-import PageWrapper from './wrappers/PageWrapper';
 
 const Header = () => {
   const icons = [
