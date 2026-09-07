@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
-import { Manrope, Inter } from 'next/font/google';
+import { Inter, Manrope } from 'next/font/google';
 import './globals.css';
 import { Footer, Header, Menu } from '@/components';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const manrope = Manrope({
   variable: '--font-manrope',
@@ -22,13 +23,21 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        <Menu />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <Menu />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
