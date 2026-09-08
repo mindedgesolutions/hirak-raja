@@ -9,6 +9,12 @@ import TypewriterText from '../smoothui/typewriter-text';
 const firstText = 'Lorem ipsum dolor sit';
 const firstSpeed = 50;
 
+const images = [
+  { id: 'banner-1', path: '/banners/banner-1.jpg' },
+  { id: 'banner-2', path: '/banners/banner-2.jpg' },
+  { id: 'banner-3', path: '/banners/banner-3.jpg' },
+];
+
 const HeroSection = () => {
   const textDelay = firstText.length * firstSpeed;
   const [show, setShow] = useState(false);
@@ -32,39 +38,18 @@ const HeroSection = () => {
       <div className="w-1/2 cursor-grab relative">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
-            <div className="min-w-0 flex-[0_0_100%]">
-              <div className="relative aspect-video w-full h-100">
-                <Image
-                  src="/banners/banner-1.jpg"
-                  alt="Banner 1"
-                  fill
-                  priority
-                  className="object-cover"
-                />
+            {images.map((image) => (
+              <div key={image.id} className="min-w-0 flex-[0_0_100%]">
+                <div className="relative aspect-video w-full h-100">
+                  <Image
+                    src={image.path}
+                    alt={image.id}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
-            </div>
-
-            <div className="min-w-0 flex-[0_0_100%]">
-              <div className="relative aspect-video w-full h-100">
-                <Image
-                  src="/banners/banner-2.jpg"
-                  alt="Banner 2"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="min-w-0 flex-[0_0_100%]">
-              <div className="relative aspect-video w-full h-100">
-                <Image
-                  src="/banners/banner-3.jpg"
-                  alt="Banner 3"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
         <div className="absolute inset-0 bg-card-foreground/20" />
