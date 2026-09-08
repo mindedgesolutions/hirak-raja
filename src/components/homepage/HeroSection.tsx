@@ -62,7 +62,7 @@ const HeroSection = () => {
           </div>
           <div className="space-y-8">
             {show && (
-              <div className="text-base text-card font-inter tracking-wider leading-relaxed">
+              <div className="text-sm text-card font-inter tracking-wider leading-8">
                 <TypewriterText speed={50}>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Magnam praesentium sed eaque neque
