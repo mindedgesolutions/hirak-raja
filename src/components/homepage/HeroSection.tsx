@@ -4,6 +4,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { TextWrapper } from '@/components';
 import TypewriterText from '../smoothui/typewriter-text';
 
 const firstText = 'Lorem ipsum dolor sit';
@@ -57,17 +58,25 @@ const HeroSection = () => {
 
       <div className="flex w-1/2 min-h-50 flex-col items-center justify-center space-y-8">
         <div className="text-left px-8">
-          <div className="mb-4 text-card font-bold font-inter text-2xl tracking-wider leading-relaxed">
-            <TypewriterText speed={firstSpeed}>{firstText}</TypewriterText>
+          <div className="mb-4 text-card font-normal font-inter text-2xl tracking-widest leading-relaxed">
+            <TypewriterText
+              speed={firstSpeed}
+              className="font-space-mono uppercase"
+            >
+              {firstText}
+            </TypewriterText>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-8 mt-8">
             {show && (
-              <div className="text-sm text-card font-inter tracking-wider leading-8">
-                <TypewriterText speed={50}>
+              <TextWrapper className="text-card">
+                <TypewriterText
+                  speed={50}
+                  className="font-space-mono uppercase"
+                >
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Magnam praesentium sed eaque neque
                 </TypewriterText>
-              </div>
+              </TextWrapper>
             )}
           </div>
         </div>

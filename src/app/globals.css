@@ -49,6 +49,7 @@
 
   --font-manrope: var(--font-manrope);
   --font-inter: var(--font-inter);
+  --font-space-mono: var(--font-space-mono);
 }
 
 :root {
