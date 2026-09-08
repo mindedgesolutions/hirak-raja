@@ -29,7 +29,7 @@ const HeroSection = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShow(true);
-    }, textDelay);
+    }, textDelay + 500);
 
     return () => clearTimeout(timeout);
   }, [textDelay]);
@@ -68,7 +68,7 @@ const HeroSection = () => {
           </div>
           <div className="space-y-8 mt-8">
             {show && (
-              <TextWrapper className="text-card">
+              <TextWrapper className="text-card leading-8">
                 <TypewriterText
                   speed={50}
                   className="font-space-mono uppercase"
