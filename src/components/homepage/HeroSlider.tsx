@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import Header from './shared/Header';
+import { Header, HeroSection } from '@/components';
 
 const HeroSlider = () => {
   return (
-    <div className="min-h-200 bg-primary-foreground relative">
+    <div className="min-h-180 bg-primary-foreground relative">
       <Image
         src="/banners/banner-1.jpg"
         alt="banner 1"
@@ -17,6 +17,9 @@ const HeroSlider = () => {
 
       <div className="relative z-20">
         <Header />
+        <div className="mx-auto flex min-h-100 max-w-5xl justify-start items-start px-6">
+          <HeroSection />
+        </div>
       </div>
     </div>
   );

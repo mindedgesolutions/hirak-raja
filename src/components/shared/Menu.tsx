@@ -63,7 +63,7 @@ export default function Menu({ scrolled }: WebsiteMenuProp) {
                   'block rounded-md tracking-wider transition-colors py-2',
                   submenuClasses.item,
                 )}
-                href="/docs"
+                href="/services/career-readiness"
                 title="Career Readiness"
               >
                 <span
@@ -77,7 +77,7 @@ export default function Menu({ scrolled }: WebsiteMenuProp) {
                   'block rounded-md tracking-wider transition-colors py-2',
                   submenuClasses.item,
                 )}
-                href="/docs"
+                href="/services/import-export"
                 title="Import & Export"
               >
                 <span
@@ -91,7 +91,7 @@ export default function Menu({ scrolled }: WebsiteMenuProp) {
                   'block rounded-md tracking-wider transition-colors py-2',
                   submenuClasses.item,
                 )}
-                href="/docs"
+                href="/services/web-development"
                 title="Web Development"
               >
                 <span
@@ -117,7 +117,7 @@ export default function Menu({ scrolled }: WebsiteMenuProp) {
                   'block rounded-md tracking-wider transition-colors py-2',
                   submenuClasses.item,
                 )}
-                href="/docs"
+                href="/products/cyber-solution"
                 title="Cyber Solutions"
               >
                 <span
@@ -131,7 +131,7 @@ export default function Menu({ scrolled }: WebsiteMenuProp) {
                   'block rounded-md tracking-wider transition-colors py-2',
                   submenuClasses.item,
                 )}
-                href="/docs"
+                href="/products/kids-play"
                 title="Kids Play"
               >
                 <span

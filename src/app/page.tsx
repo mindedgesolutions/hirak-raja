@@ -1,5 +1,4 @@
-import { PageWrapper } from '@/components';
-import HeroSlider from '@/components/HeroSlider';
+import { HeroSlider, PageWrapper } from '@/components';
 
 const Home = () => {
   return (
