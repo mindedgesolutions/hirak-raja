@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Manrope } from 'next/font/google';
 import './globals.css';
-import { Footer, Header, Menu } from '@/components';
+import { Footer } from '@/components';
 import { ThemeProvider } from '@/components/theme-provider';
 
 const manrope = Manrope({
@@ -33,8 +33,6 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <Menu />
           {children}
           <Footer />
         </ThemeProvider>
