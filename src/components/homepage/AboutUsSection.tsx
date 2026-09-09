@@ -52,8 +52,8 @@ const AboutUsSection = () => {
             <span className="font-inter text-muted-foreground font-medium">
               Call to ask any question
             </span>
-            <span className="font-inter text-section-title text-2xl font-bold">
-              +91 9876543210
+            <span className="font-space-mono text-section-title text-2xl font-bold">
+              +91-9876543210
             </span>
           </div>
         </div>
