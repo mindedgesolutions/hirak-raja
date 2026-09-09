@@ -1,12 +1,29 @@
+'use client';
+
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SectionTitleWrapper, SubmitBtn, TextWrapper } from '@/components';
 import { webIcons } from '@/constants';
 
+const highlights = [
+  { id: 'highlight-1', msg: 'Lorem, ipsum dolor' },
+  { id: 'highlight-2', msg: 'Lorem ipsum dolor sit' },
+  { id: 'highlight-3', msg: 'Quos dignissimos maiores' },
+  { id: 'highlight-4', msg: 'Cupiditate temporibus' },
+];
+
 const AboutUsSection = () => {
   return (
     <section id="about-us" className="flex gap-8">
-      <div className="flex flex-col gap-12 p-4">
+      <motion.div
+        id="about-us-text"
+        className="flex flex-col gap-12 p-4"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
         <SectionTitleWrapper
           prefix="about cyber solution"
           title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
@@ -19,33 +36,20 @@ const AboutUsSection = () => {
           quaerat. Illo cupiditate eos nam?
         </TextWrapper>
         <div className="grid grid-cols-2 gap-x-16 gap-y-4">
-          <div className="flex justify-start items-center gap-4">
-            <webIcons.check className="text-section-title w-4 h-4" />
-            <span className="text-section-desc font-semibold text-base font-inter">
-              Lorem, ipsum dolor
-            </span>
-          </div>
-          <div className="flex justify-start items-center gap-4">
-            <webIcons.check className="text-section-title w-4 h-4" />
-            <span className="text-section-desc font-semibold text-base font-inter">
-              Lorem ipsum dolor sit
-            </span>
-          </div>
-          <div className="flex justify-start items-center gap-4">
-            <webIcons.check className="text-section-title w-4 h-4" />
-            <span className="text-section-desc font-semibold text-base font-inter">
-              Quos dignissimos maiores
-            </span>
-          </div>
-          <div className="flex justify-start items-center gap-4">
-            <webIcons.check className="text-section-title w-4 h-4" />
-            <span className="text-section-desc font-semibold text-base font-inter">
-              Cupiditate temporibus
-            </span>
-          </div>
+          {highlights.map((highlight) => (
+            <div
+              key={highlight.id}
+              className="flex justify-start items-center gap-4"
+            >
+              <webIcons.check className="text-section-title w-4 h-4" />
+              <span className="text-section-desc font-semibold text-base font-inter">
+                {highlight.msg}
+              </span>
+            </div>
+          ))}
         </div>
         <div className="flex justify-start items-center -mt-4 gap-4">
-          <span className="bg-section-title p-6">
+          <span className="bg-section-title p-4">
             <webIcons.phone className="text-card w-8 h-8" />
           </span>
           <div className="flex flex-col gap-2">
@@ -60,15 +64,22 @@ const AboutUsSection = () => {
         <Link href={`/products/cyber-solution`}>
           <SubmitBtn label="Read More" />
         </Link>
-      </div>
-      <div className="relative aspect-video w-150 h-150">
+      </motion.div>
+      <motion.div
+        id="about-us-image"
+        className="relative aspect-video w-150 h-150"
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
         <Image
           src={`/banners/banner-1.jpg`}
           alt="Cyber solutions"
           fill
           className="object-cover"
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
