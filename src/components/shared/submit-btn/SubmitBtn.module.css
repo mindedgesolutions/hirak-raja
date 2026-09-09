@@ -1,0 +1,23 @@
+.stage {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  width: 100%;
+}
+
+.labelWindow {
+  position: relative;
+  display: block;
+  width: max-content;
+  overflow: hidden;
+}
+
+.labelCopy {
+  display: block;
+  white-space: nowrap;
+}
+
+.labelCopyIncoming {
+  position: absolute;
+  inset: 0;
+}

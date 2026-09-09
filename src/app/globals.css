@@ -50,6 +50,8 @@
   --font-manrope: var(--font-manrope);
   --font-inter: var(--font-inter);
   --font-space-mono: var(--font-space-mono);
+  --color-section-title: var(--section-title);
+  --color-section-desc: var(--section-desc);
 }
 
 :root {
@@ -85,6 +87,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --section-title: oklch(0.71 0.13 215); /* sky-500 */
+  --section-desc: oklch(0.44 0.1 241); /* sky-800 */
 }
 
 .dark {
@@ -119,6 +124,9 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  --section-title: oklch(0.71 0.13 215); /* sky-500 */
+  --section-desc: oklch(0.44 0.1 241); /* sky-800 */
 }
 
 @layer base {

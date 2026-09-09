@@ -10,7 +10,7 @@ const TextWrapper = ({
   return (
     <div
       className={cn(
-        'text-base text-primary font-inter tracking-wider leading-relaxed',
+        'text-base text-muted-foreground font-inter tracking-wider leading-relaxed',
         className,
       )}
     >

@@ -36,7 +36,7 @@ const HeroSection = () => {
 
   return (
     <div className="w-full flex bg-card/5 mt-20">
-      <div className="w-1/2 cursor-grab relative">
+      <div className="w-1/2 relative">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {images.map((image) => (
@@ -46,6 +46,7 @@ const HeroSection = () => {
                     src={image.path}
                     alt={image.id}
                     fill
+                    sizes="(max-width: 1200px) 100vw, 1200px"
                     className="object-cover"
                   />
                 </div>

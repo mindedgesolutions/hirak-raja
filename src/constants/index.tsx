@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaCheck, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { IoMdMail } from 'react-icons/io';
 
@@ -9,6 +9,7 @@ export const webIcons = {
   facebook: FaFacebookF,
   instagram: FaInstagram,
   youtube: FaYoutube,
+  check: FaCheck,
 };
 
 export const titles = {

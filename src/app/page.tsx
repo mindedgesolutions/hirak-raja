@@ -1,13 +1,16 @@
-import { HeroSlider, PageWrapper } from '@/components';
+import { AboutUsSection, HeroSlider, SectionWrapper } from '@/components';
 
 const Home = () => {
   return (
     <>
       <HeroSlider />
-      <PageWrapper className="min-h-400">
-        <div className="font-manrope text-3xl">This is a Heading</div>
-        <div className="font-inter">Welcome to NextJS</div>
-      </PageWrapper>
+      {/* about us starts */}
+      <SectionWrapper className="mt-20">
+        <AboutUsSection />
+      </SectionWrapper>
+      {/* about us ends */}
+
+      <div className="font-inter">Welcome to NextJS</div>
     </>
   );
 };
