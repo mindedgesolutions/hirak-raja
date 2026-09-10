@@ -29,7 +29,7 @@ const SectionTitleWrapper = ({
       )}
       <header
         className={cn(
-          'font-manrope text-section-desc text-3xl font-extrabold leading-normal',
+          'font-manrope text-primary text-3xl font-extrabold leading-normal',
           titleClass,
         )}
       >

@@ -1,16 +1,20 @@
-import { AboutUsSection, HeroSlider, SectionWrapper } from '@/components';
+import {
+  AboutCyberSolution,
+  HeroSlider,
+  SectionWrapper,
+  ServicesSection,
+  WhyUsSection,
+} from '@/components';
 
 const Home = () => {
   return (
     <>
       <HeroSlider />
-      {/* about us starts */}
-      <SectionWrapper className="mt-20">
-        <AboutUsSection />
+      <SectionWrapper className="flex flex-col mt-24 gap-28 min-h-600">
+        <AboutCyberSolution />
+        <WhyUsSection />
+        <ServicesSection />
       </SectionWrapper>
-      {/* about us ends */}
-
-      <div className="font-inter">Welcome to NextJS</div>
     </>
   );
 };

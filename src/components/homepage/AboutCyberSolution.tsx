@@ -13,7 +13,7 @@ const highlights = [
   { id: 'highlight-4', msg: 'Cupiditate temporibus' },
 ];
 
-const AboutUsSection = () => {
+const AboutCyberSolution = () => {
   return (
     <section id="about-us" className="flex gap-8">
       <motion.div
@@ -42,13 +42,19 @@ const AboutUsSection = () => {
               className="flex justify-start items-center gap-4"
             >
               <webIcons.check className="text-section-title w-4 h-4" />
-              <span className="text-section-desc font-semibold text-base font-inter">
+              <span className="text-primary font-semibold text-base font-inter">
                 {highlight.msg}
               </span>
             </div>
           ))}
         </div>
-        <div className="flex justify-start items-center -mt-4 gap-4">
+        <motion.div
+          className="flex justify-start items-center -mt-4 gap-4"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
           <span className="bg-section-title p-4">
             <webIcons.phone className="text-card w-8 h-8" />
           </span>
@@ -60,10 +66,17 @@ const AboutUsSection = () => {
               +91-9876543210
             </span>
           </div>
-        </div>
-        <Link href={`/products/cyber-solution`}>
-          <SubmitBtn label="Read More" />
-        </Link>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <Link href={`/products/cyber-solution`}>
+            <SubmitBtn label="Read More" />
+          </Link>
+        </motion.div>
       </motion.div>
       <motion.div
         id="about-us-image"
@@ -83,4 +96,4 @@ const AboutUsSection = () => {
     </section>
   );
 };
-export default AboutUsSection;
+export default AboutCyberSolution;

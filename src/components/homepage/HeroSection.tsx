@@ -59,7 +59,7 @@ const HeroSection = () => {
 
       <div className="flex w-1/2 min-h-50 flex-col items-center justify-center space-y-8">
         <div className="text-left px-8">
-          <div className="mb-4 text-card font-normal font-inter text-2xl tracking-widest leading-relaxed">
+          <div className="mb-4 text-card font-normal text-2xl tracking-widest leading-relaxed">
             <TypewriterText
               speed={firstSpeed}
               className="font-space-mono uppercase"
