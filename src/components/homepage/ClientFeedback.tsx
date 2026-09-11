@@ -126,7 +126,7 @@ const ClientFeedback = () => {
                       <div className="mt-4 tracking-wide flex flex-row font-inter text-xs gap-1 text-muted-foreground">
                         {`${feedback.designation}, ${feedback.company}`}
                       </div>
-                      <div className="p-8 font-inter text-muted-foreground tracking-wider leading-normal text-justify text-xs">
+                      <div className="p-4 px-6 font-inter text-muted-foreground tracking-wide leading-normal text-justify text-xs">
                         {feedback.msg}
                       </div>
                     </div>
