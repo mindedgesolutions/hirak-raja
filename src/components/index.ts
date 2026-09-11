@@ -1,6 +1,8 @@
 // 1. homepage exports ----
 
 export { default as AboutCyberSolution } from '@/components/homepage/AboutCyberSolution';
+export { default as AboutKidsPlay } from '@/components/homepage/AboutKidsPlay';
+export { default as ClientFeedback } from '@/components/homepage/ClientFeedback';
 export { default as HeroSection } from '@/components/homepage/HeroSection';
 export { default as HeroSlider } from '@/components/homepage/HeroSlider';
 export { default as ServicesSection } from '@/components/homepage/ServicesSection';

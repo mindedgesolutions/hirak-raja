@@ -4,6 +4,8 @@ import {
   FaFacebookF,
   FaGlobe,
   FaInstagram,
+  FaLongArrowAltLeft,
+  FaLongArrowAltRight,
   FaUsers,
   FaYoutube,
 } from 'react-icons/fa';
@@ -23,6 +25,8 @@ export const webIcons = {
   flight: MdFlight,
   globe: FaGlobe,
   rightArrow: FaArrowRight,
+  leftLongArrow: FaLongArrowAltLeft,
+  rightLongArrow: FaLongArrowAltRight,
 };
 
 export const titles = {
