@@ -5,31 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SectionTitleWrapper, SubmitBtn, TextWrapper } from '@/components';
 import { webIcons } from '@/constants';
-
-const highlights = [
-  { id: 'highlight-1', msg: 'Lorem, ipsum dolor' },
-  { id: 'highlight-2', msg: 'Lorem ipsum dolor sit' },
-  { id: 'highlight-3', msg: 'Quos dignissimos maiores' },
-  { id: 'highlight-4', msg: 'Cupiditate temporibus' },
-];
-
-const images = [
-  {
-    id: 'banner-3',
-    src: '/banners/banner-3.jpg',
-    alt: 'Kids play',
-  },
-  {
-    id: 'banner-2',
-    src: '/banners/banner-2.jpg',
-    alt: 'Kids play',
-  },
-  {
-    id: 'banner-1',
-    src: '/banners/banner-1.jpg',
-    alt: 'Kids play',
-  },
-];
+import { kidsPlayHighlights, kidsPlayImages } from '@/constants/lookup';
 
 const AboutKidsPlay = () => {
   return (
@@ -45,8 +21,8 @@ const AboutKidsPlay = () => {
         >
           <div className="absolute top-0 left-0 w-75 h-50">
             <Image
-              src={images[0].src}
-              alt={images[0].alt}
+              src={kidsPlayImages[0].src}
+              alt={kidsPlayImages[0].alt}
               fill
               sizes="300px"
               className="object-cover"
@@ -55,8 +31,8 @@ const AboutKidsPlay = () => {
 
           <div className="absolute top-45 right-0 w-100 h-75">
             <Image
-              src={images[1].src}
-              alt={images[1].alt}
+              src={kidsPlayImages[1].src}
+              alt={kidsPlayImages[1].alt}
               fill
               sizes="400px"
               className="object-cover"
@@ -65,8 +41,8 @@ const AboutKidsPlay = () => {
 
           <div className="absolute bottom-0 left-20 w-32 h-32">
             <Image
-              src={images[2].src}
-              alt={images[2].alt}
+              src={kidsPlayImages[2].src}
+              alt={kidsPlayImages[2].alt}
               fill
               sizes="128px"
               className="object-cover"
@@ -95,7 +71,7 @@ const AboutKidsPlay = () => {
           quaerat. Illo cupiditate eos nam?
         </TextWrapper>
         <div className="grid grid-cols-2 gap-x-16 gap-y-4">
-          {highlights.map((highlight) => (
+          {kidsPlayHighlights.map((highlight) => (
             <div
               key={highlight.id}
               className="flex justify-start items-center gap-4"

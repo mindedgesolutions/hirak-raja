@@ -5,16 +5,11 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { TextWrapper } from '@/components';
+import { heroImages } from '@/constants/lookup';
 import TypewriterText from '../smoothui/typewriter-text';
 
 const firstText = 'Lorem ipsum dolor sit';
 const firstSpeed = 50;
-
-const images = [
-  { id: 'banner-1', path: '/banners/banner-1.jpg' },
-  { id: 'banner-2', path: '/banners/banner-2.jpg' },
-  { id: 'banner-3', path: '/banners/banner-3.jpg' },
-];
 
 const HeroSection = () => {
   const textDelay = firstText.length * firstSpeed;
@@ -39,7 +34,7 @@ const HeroSection = () => {
       <div className="w-1/2 relative">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
-            {images.map((image) => (
+            {heroImages.map((image) => (
               <div key={image.id} className="min-w-0 flex-[0_0_100%]">
                 <div className="relative aspect-video w-full h-100">
                   <Image

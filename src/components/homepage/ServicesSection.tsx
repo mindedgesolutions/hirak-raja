@@ -5,30 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { IconBtn, SectionTitleWrapper, TextWrapper } from '@/components';
 import { webIcons } from '@/constants';
-
-const services = [
-  {
-    id: 'career-readiness',
-    title: 'career readiness',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, maxime',
-    icon: webIcons.users,
-    link: `/services/career-readiness`,
-  },
-  {
-    id: 'import-export',
-    title: 'import & export',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, maxime',
-    icon: webIcons.flight,
-    link: `/services/import-export`,
-  },
-  {
-    id: 'web-development',
-    title: 'web development',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, maxime',
-    icon: webIcons.globe,
-    link: `/services/web-development`,
-  },
-];
+import { services } from '@/constants/lookup';
 
 const ServicesSection = () => {
   const [hoveredService, setHoveredService] = useState<string | null>(null);

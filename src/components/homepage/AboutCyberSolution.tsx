@@ -5,13 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SectionTitleWrapper, SubmitBtn, TextWrapper } from '@/components';
 import { webIcons } from '@/constants';
-
-const highlights = [
-  { id: 'highlight-1', msg: 'Lorem, ipsum dolor' },
-  { id: 'highlight-2', msg: 'Lorem ipsum dolor sit' },
-  { id: 'highlight-3', msg: 'Quos dignissimos maiores' },
-  { id: 'highlight-4', msg: 'Cupiditate temporibus' },
-];
+import { highlights } from '@/constants/lookup';
 
 const AboutCyberSolution = () => {
   return (
